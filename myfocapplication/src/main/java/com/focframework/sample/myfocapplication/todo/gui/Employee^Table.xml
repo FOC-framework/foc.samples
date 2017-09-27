@@ -1,0 +1,9 @@
+<VerticalLayout margin="true" width="95%" captionMargin="0" spacing="true">
+  <ValidationSettings withApply="true" withAttach="true" withPrint="false" />
+ 
+	<GuiTable name="DB_TABLE_NAME_TABLE" dataPath="DATAROOT" width="100%" height="99%">
+		<TableColumn name="FirstName" caption="FirstName" />
+		<TableColumn name="LastName" caption="LastName" />
+	</GuiTable>
+  
+</VerticalLayout> 
