@@ -1,13 +1,13 @@
-package com.focframework.sample.myfocapplication.todo;
+package com.focframework.sample.myfocapplication.employee;
 
 import com.foc.annotations.model.FocEntity;
 import com.foc.annotations.model.fields.FocDate;
-import com.foc.annotations.model.fields.FocObject;
+import com.foc.annotations.model.fields.FocForeignEntity;
 import com.foc.annotations.model.fields.FocInteger;
 import com.foc.annotations.model.fields.FocString;
 import com.foc.desc.FocConstructor;
-import com.foc.desc.pojo.PojoFocDesc;
-import com.foc.desc.pojo.PojoFocObject;
+import com.foc.desc.parsers.ParsedFocDesc;
+import com.foc.desc.parsers.pojo.PojoFocObject;
 
 @FocEntity
 public class Achievement extends PojoFocObject {
@@ -20,7 +20,7 @@ public class Achievement extends PojoFocObject {
 	public static final String FNAME_Date = "Date";
 	@FocInteger
 	public static final String FNAME_Rating = "Rating";	
-	@FocObject(table="Employee", cascade=true, saveOnebyOne=false)
+	@FocForeignEntity(table="Employee", cascade=true, saveOnebyOne=false)
 	public static final String FNAME_Employee = "Employee";	
 	
 	public Achievement(FocConstructor constr) {
@@ -32,7 +32,7 @@ public class Achievement extends PojoFocObject {
 		super.dispose();
 	}
 
-	public static PojoFocDesc getFocDesc() {
-		return PojoFocDesc.getInstance(DBNAME);
+	public static ParsedFocDesc getFocDesc() {
+		return ParsedFocDesc.getInstance(DBNAME);
 	}
 }

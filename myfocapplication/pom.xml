@@ -92,7 +92,12 @@
 		    <artifactId>h2</artifactId>
 		    <version>1.4.196</version>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>com.focframework</groupId>
+			<artifactId>focVaadinTheme</artifactId>
+			<version>${foc.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -172,6 +177,19 @@
 				<version>${jetty.plugin.version}</version>
 				<configuration>
 					<scanIntervalSeconds>2</scanIntervalSeconds>
+                    <webAppConfig>
+                        <contextPath>/</contextPath>
+                    </webAppConfig>					
+<!-- 
+					<scanTargetPatterns>
+						<scanTargetPattern>
+							<directory>src/other-resources</directory>
+							<includes>
+								<include>**/*.xml</include>
+							</includes>
+						</scanTargetPattern>
+					</scanTargetPatterns>
+ -->					
 				</configuration>
 			</plugin>
 		</plugins>

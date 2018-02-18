@@ -1,4 +1,4 @@
-package com.focframework.sample.myfocapplication.todo;
+package com.focframework.sample.myfocapplication.employee;
 
 import com.foc.annotations.model.FocChoice;
 import com.foc.annotations.model.FocEntity;
@@ -9,8 +9,8 @@ import com.foc.annotations.model.fields.FocMultipleChoice;
 import com.foc.annotations.model.fields.FocString;
 import com.foc.annotations.model.fields.FocTime;
 import com.foc.desc.FocConstructor;
-import com.foc.desc.pojo.PojoFocDesc;
-import com.foc.desc.pojo.PojoFocObject;
+import com.foc.desc.parsers.ParsedFocDesc;
+import com.foc.desc.parsers.pojo.PojoFocObject;
 import com.foc.list.FocList;
 
 @FocEntity
@@ -32,7 +32,10 @@ public class Employee extends PojoFocObject {
 	public static final String FNAME_EndShift = "EndShift";	
 	@FocDouble
 	public static final String FNAME_Salary = "Salary";	
-	@FocMultipleChoice(choices={@FocChoice(id=0, title="Disabled"), @FocChoice(id=1, title="Probation"), @FocChoice(id=2, title="Employee")})
+	@FocMultipleChoice(choices={
+			@FocChoice(id=0, title="Disabled"), 
+			@FocChoice(id=1, title="Probation"), 
+			@FocChoice(id=2, title="Employee")})
 	public static final String FNAME_EmployeeStatus = "EmployeeStatus";
 	
 	public Employee(FocConstructor constr) {
@@ -44,8 +47,8 @@ public class Employee extends PojoFocObject {
 		super.dispose();
 	}
 
-	public static PojoFocDesc getFocDesc() {
-		return PojoFocDesc.getInstance(DBNAME);
+	public static ParsedFocDesc getFocDesc() {
+		return ParsedFocDesc.getInstance(DBNAME);
 	}
 
 	public String getFirstName() {

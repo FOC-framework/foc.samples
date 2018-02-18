@@ -1,4 +1,4 @@
-package com.focframework.sample.myfocapplication.todo.gui;
+package com.focframework.sample.myfocapplication.employee.gui;
 
 import com.foc.vaadin.gui.xmlForm.FocXMLLayout;
 

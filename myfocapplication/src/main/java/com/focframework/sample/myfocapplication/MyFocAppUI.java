@@ -4,6 +4,7 @@ import javax.servlet.annotation.WebServlet;
 
 import com.foc.vaadin.FocCentralPanel;
 import com.foc.vaadin.FocWebApplication;
+import com.foc.vaadin.FocWebVaadinWindow;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.VaadinRequest;
@@ -49,5 +50,10 @@ public class MyFocAppUI extends FocWebApplication { //UI {
     @WebServlet(urlPatterns = "/*", name = "FocUIServlet", asyncSupported = true)
     @VaadinServletConfiguration(ui = MyFocAppUI.class, productionMode = false)
     public static class FocUIServlet extends VaadinServlet {
+    }
+    
+    @Override
+    public FocCentralPanel newWindow(){
+    	return new MyFocApplicationMainWindow();
     }
 }

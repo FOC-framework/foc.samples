@@ -6,12 +6,12 @@ import com.foc.web.modules.business.BusinessEssentialsWebModule;
 import com.foc.web.server.FocDefaultWebServer;
 import com.foc.web.server.FocWebServer;
 import com.foc.web.unitTesting.FocUnitDictionary;
-import com.focframework.sample.myfocapplication.todo.TodoModule;
+import com.focframework.sample.myfocapplication.employee.EmployeeModule;
 
 @SuppressWarnings("serial")
 public class MyFocAppWebServer extends FocDefaultWebServer {// FocWebServer {
 
-	private static String VERSION_TITLE = "My Foc Application - 2.0.08 (30/08/2017)";
+	private static String VERSION_TITLE = "My Foc Application - 2.0.08 (15/12/2017)";
 		
 	protected FocMainClass newMainClass() {
 		Globals.logString("Init Web Server");
@@ -24,8 +24,7 @@ public class MyFocAppWebServer extends FocDefaultWebServer {// FocWebServer {
 
 	@Override
 	protected FocUnitDictionary newUnitDictionary() {
-		return null;
-//		return new FenixUnitTestingDictionary();
+		return new FocUnitDictionary();
 	}
 
 	public void declareModules() {
@@ -36,8 +35,10 @@ public class MyFocAppWebServer extends FocDefaultWebServer {// FocWebServer {
 
 	@Override
 	public void modules() {
-		// Todo Module
-		TodoModule todoModule = new TodoModule();
-		todoModule.declare();
+		super.modules();
+		
+		// Employee Module
+		EmployeeModule employeeModule = new EmployeeModule();
+		employeeModule.declare();
 	}
 }
