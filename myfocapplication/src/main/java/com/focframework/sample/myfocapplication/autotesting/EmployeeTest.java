@@ -19,8 +19,8 @@ public class EmployeeTest extends FocUnitTest {
   public void runTest(){
 		boolean created = false;
 		created = FocUnitDictionary.getInstance().getLogger().openTest("Testing Employee Reports");
-		
-		cmd.menu_Click("MNU_EMPLOYEE_LIST");
+		/*
+		menu_Click("MNU_EMPLOYEE_LIST");
 		long ref = cmd.table_Add("DB_TABLE_NAME_TABLE");
 		cmd.component_SetValue("FirstName", "John", false);
 		cmd.component_SetValue("LastName", "Smith", false);
@@ -28,6 +28,7 @@ public class EmployeeTest extends FocUnitTest {
 		cmd.component_SetValue("EndShift", "17:00", false);
 		cmd.component_SetValue("Salary", "1000", false);
 		cmd.button_ClickApply();
+		*/
 	}
 	
 	public void dispose(){
