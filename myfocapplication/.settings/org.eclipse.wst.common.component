@@ -4,27 +4,6 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/target/generated-resources/gwt"/>
-        <dependent-module archiveName="focWebServer-1.7.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/focWebServer/focWebServer">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="focAPI-1.7.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/focAPI/focAPI">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="focShared-1.7.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/focShared/focShared">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="foc-1.7.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/foc/foc">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="focOfficeLink-1.7.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/focOfficeLink/focOfficeLink">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="focDataSource-1.7.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/focDataSource_DB/focDataSource_DB">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="focVaadinTheme-1.7.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/focVaadinTheme/focVaadinTheme">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <property name="context-root" value="myfocapplication"/>
         <property name="java-output-path" value="/myfocapplication/target/classes"/>
         <property name="component.exclusion.patterns" value="WEB-INF/classes/VAADIN/widgetsets/WEB-INF/**"/>

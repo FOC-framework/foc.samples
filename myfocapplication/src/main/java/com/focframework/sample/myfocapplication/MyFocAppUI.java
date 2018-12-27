@@ -25,6 +25,11 @@ public class MyFocAppUI extends FocWebApplication { //UI {
 		return "myfoctheme";
 	}
 	
+	@WebServlet(value = "/*", asyncSupported = true)
+	@VaadinServletConfiguration(productionMode = false, ui = MyFocAppUI.class)
+	public static class Servlet extends VaadinServlet {
+	}
+
 	/*
     @Override
     protected void init(VaadinRequest vaadinRequest) {
@@ -47,10 +52,10 @@ public class MyFocAppUI extends FocWebApplication { //UI {
     }
     */
 
-    @WebServlet(urlPatterns = "/*", name = "FocUIServlet", asyncSupported = true)
-    @VaadinServletConfiguration(ui = MyFocAppUI.class, productionMode = false)
-    public static class FocUIServlet extends VaadinServlet {
-    }
+//    @WebServlet(urlPatterns = "/*", name = "FocUIServlet", asyncSupported = true)
+//    @VaadinServletConfiguration(ui = MyFocAppUI.class, productionMode = false)
+//    public static class FocUIServlet extends VaadinServlet {
+//    }
     
     @Override
     public FocCentralPanel newWindow(){
